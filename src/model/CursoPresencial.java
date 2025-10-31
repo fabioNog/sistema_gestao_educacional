@@ -1,3 +1,5 @@
+package model;
+
 public class CursoPresencial extends Curso {
     private String sala;
 
@@ -8,7 +10,12 @@ public class CursoPresencial extends Curso {
 
     @Override
     public String detalharCurso() {
-        return "Curso Presencial: " + getNome() + ", Código: " + getCodigo() +
+        return "model.Curso Presencial: " + getNome() + ", Código: " + getCodigo() +
                 ", Carga: " + getCargaHoraria() + ", Sala: " + sala;
+    }
+
+    @Override
+    public String gerarRelatorio() {
+        return "Relatório model.Curso Presencial: " + getNome() + ", Sala: " + sala;
     }
 }

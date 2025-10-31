@@ -1,3 +1,5 @@
+package model;
+
 public class CursoEAD extends Curso {
     private String plataforma;
 
@@ -8,7 +10,12 @@ public class CursoEAD extends Curso {
 
     @Override
     public String detalharCurso() {
-        return "Curso EAD: " + getNome() + ", Código: " + getCodigo() +
+        return "model.Curso EAD: " + getNome() + ", Código: " + getCodigo() +
                 ", Carga: " + getCargaHoraria() + ", Plataforma: " + plataforma;
+    }
+
+    @Override
+    public String gerarRelatorio() {
+        return "Relatório model.Curso EAD: " + getNome() + ", plataforma: " + plataforma;
     }
 }

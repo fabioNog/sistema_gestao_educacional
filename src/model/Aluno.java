@@ -1,3 +1,5 @@
+package model;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +48,7 @@ public class Aluno extends Usuario implements Autenticacao {
 
     @Override
     public String toString() {
-        return "Aluno: " + nome + ", Matrícula: " + matricula + ", Curso: " + curso;
+        return "model.Aluno: " + nome + ", Matrícula: " + matricula + ", model.Curso: " + curso;
     }
 
     public void adicionarAvaliacao(Avaliacao avaliacao) {
@@ -55,6 +57,10 @@ public class Aluno extends Usuario implements Autenticacao {
 
     public List<Avaliacao> getAvaliacoes() {
         return avaliacoes;
+    }
+
+    public String gerarRelatorio() {
+        return "Relatório model.Aluno: " + getNome() + ", Matrícula: " + matricula + ", model.Curso: " + curso;
     }
 }
 

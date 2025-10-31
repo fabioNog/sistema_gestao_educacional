@@ -1,3 +1,5 @@
+package model;
+
 public class Professor extends Usuario implements Autenticacao {
     private String nome;
     private String especialidade;
@@ -40,6 +42,10 @@ public class Professor extends Usuario implements Autenticacao {
 
     @Override
     public String toString() {
-        return "Professor: " + nome + ", Especialidade: " + especialidade + ", Registro: " + registro;
+        return "model.Professor: " + nome + ", Especialidade: " + especialidade + ", Registro: " + registro;
+    }
+
+    public String gerarRelatorio() {
+        return "Relatório model.Professor: " + getNome() + ", Especialidade: " + especialidade;
     }
 }

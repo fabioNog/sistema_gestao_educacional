@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Curso {
     private String nome;
     private String codigo;
@@ -5,6 +7,8 @@ public abstract class Curso {
 
     // Agora abstrato para forçar override
     public abstract String detalharCurso();
+
+    public abstract String gerarRelatorio();
 
     public Curso(String nome, String codigo, int cargaHoraria) {
         this.nome = nome;
@@ -38,6 +42,7 @@ public abstract class Curso {
 
     @Override
     public String toString() {
-        return "Curso: " + nome + ", Código: " + codigo + ", Carga Horária: " + cargaHoraria + " horas";
+        return "model.Curso: " + nome + ", Código: " + codigo + ", Carga Horária: " + cargaHoraria + " horas";
     }
+
 }

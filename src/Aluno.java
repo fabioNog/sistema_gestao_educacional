@@ -1,7 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class Aluno {
     private String nome;
     private String matricula;
     private String curso;
+
+    private List<Avaliacao> avaliacoes = new ArrayList<>();
 
     public Aluno(String nome, String matricula, String curso) {
         this.nome = nome;
@@ -36,6 +42,14 @@ public class Aluno {
     @Override
     public String toString() {
         return "Aluno: " + nome + ", Matrícula: " + matricula + ", Curso: " + curso;
+    }
+
+    public void adicionarAvaliacao(Avaliacao avaliacao) {
+        avaliacoes.add(avaliacao);
+    }
+
+    public List<Avaliacao> getAvaliacoes() {
+        return avaliacoes;
     }
 }
 

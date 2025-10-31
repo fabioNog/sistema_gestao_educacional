@@ -2,17 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Aluno {
+public class Aluno extends Usuario implements Autenticacao {
     private String nome;
     private String matricula;
     private String curso;
 
     private List<Avaliacao> avaliacoes = new ArrayList<>();
 
-    public Aluno(String nome, String matricula, String curso) {
-        this.nome = nome;
+    public Aluno(String nome, String matricula, String curso, String login, String senha) {
+        super(nome, login, senha);
         this.matricula = matricula;
         this.curso = curso;
+    }
+
+    @Override
+    public boolean autenticar(String login, String senha) {
+        return verificarSenha(login, senha);
     }
 
     public String getNome() {

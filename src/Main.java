@@ -7,5 +7,11 @@ public class Main {
         aluno.adicionarAvaliacao(av1);
 
         System.out.println("Avaliação: " + av1.getDescricao() + ", Nota: " + av1.getNota());
+
+        Curso presencial = new CursoPresencial("OO Presencial", "OOP101", 60, "Sala 101");
+        Curso ead = new CursoEAD("OO EAD", "OOE101", 40, "Zoom");
+
+        System.out.println(presencial.detalharCurso());
+        System.out.println(ead.detalharCurso());
     }
 }
